@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHNO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
             font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
-        .full-width {
+        header {
+            flex-grow: 0;
+            text-align: center;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            white-space: nowrap;
             overflow: hidden;
+            white-space: nowrap;
         }
 
         .title {
             font-size: 10vw;
+            line-height: 1;
+            padding: 0 10px; /* Adjust padding if necessary */
+            margin: 0;
+            display: inline-block;
+            transform: scale(1, 1.2); /* Adjust vertical scaling if necessary */
         }
 
         .heading {
@@ -39,31 +43,32 @@
             padding: 0 20px;
             text-align: center;
             margin-bottom: 50px;
+            flex-grow: 1;
         }
 
-        .copyright {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
+        footer {
             font-size: 0.8em;
+            text-align: center;
             padding: 10px 0;
+            flex-grow: 0;
         }
 
         @media (max-width: 600px) {
             .title {
-                font-size: 7vw;
+                font-size: 20vw; /* Adjust this value to get the desired effect on small screens */
             }
         }
     </style>
 </head>
 <body>
-    <header class="full-width title">TECHNO</header>
-    <div class="heading">Coming soon to an AI agent near you.</div>
+    <header>
+        <div class="title">TECHNO</div>
+    </header>
+    <div class="heading">Yes. It is me.</div>
     <main class="main-body">
         I am a techno-optimist, programmer and engineer. More to come later in 2024.
     </main>
-    <footer class="copyright">
+    <footer>
         &copy; Joe Lamming 2024.
     </footer>
 </body>
